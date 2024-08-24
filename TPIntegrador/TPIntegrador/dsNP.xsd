@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsNP" targetNamespace="http://tempuri.org/dsNP.xsd" xmlns:mstns="http://tempuri.org/dsNP.xsd" xmlns="http://tempuri.org/dsNP.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="_76004_TPConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="_76004_TPConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TPIntegrador.Properties.Settings.GlobalReference.Default._76004_TPConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NpTableTableAdapter" GeneratorDataComponentClassName="NpTableTableAdapter" Name="NpTable" UserDataComponentName="NpTableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="_76004_TPConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select n.id_NotaPedido, l.nombre, m.nombre as 'med', d.cantidad, n.fechaPedido from DetallePedido d JOIN NotaPedido n ON d.id_NotaPedido=n.id_notaPedido JOIN Medicamento m ON d.id_medcamento=m.id_medicamento JOIN Laboratorio l ON n.id_laboratorio=l.id_laboratorio</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_NotaPedido" DataSetColumn="id_NotaPedido" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="med" DataSetColumn="med" />
+              <Mapping SourceColumn="cantidad" DataSetColumn="cantidad" />
+              <Mapping SourceColumn="fechaPedido" DataSetColumn="fechaPedido" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsNP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsNP" msprop:Generator_UserDSName="dsNP">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NpTable" msprop:Generator_TableClassName="NpTableDataTable" msprop:Generator_TableVarName="tableNpTable" msprop:Generator_RowChangedName="NpTableRowChanged" msprop:Generator_TablePropName="NpTable" msprop:Generator_RowDeletingName="NpTableRowDeleting" msprop:Generator_RowChangingName="NpTableRowChanging" msprop:Generator_RowEvHandlerName="NpTableRowChangeEventHandler" msprop:Generator_RowDeletedName="NpTableRowDeleted" msprop:Generator_RowClassName="NpTableRow" msprop:Generator_UserTableName="NpTable" msprop:Generator_RowEvArgName="NpTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_NotaPedido" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_NotaPedido" msprop:Generator_ColumnPropNameInRow="id_NotaPedido" msprop:Generator_ColumnPropNameInTable="id_NotaPedidoColumn" msprop:Generator_UserColumnName="id_NotaPedido" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="med" msprop:Generator_ColumnVarNameInTable="columnmed" msprop:Generator_ColumnPropNameInRow="med" msprop:Generator_ColumnPropNameInTable="medColumn" msprop:Generator_UserColumnName="med" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:int" minOccurs="0" />
+              <xs:element name="fechaPedido" msprop:Generator_ColumnVarNameInTable="columnfechaPedido" msprop:Generator_ColumnPropNameInRow="fechaPedido" msprop:Generator_ColumnPropNameInTable="fechaPedidoColumn" msprop:Generator_UserColumnName="fechaPedido" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:NpTable" />
+      <xs:field xpath="mstns:id_NotaPedido" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
