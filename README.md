@@ -9,11 +9,6 @@ Este proyecto es una simulación de una aplicación administrativa para una farm
 - [Características del Sistema](#características-del-sistema)
 - [Base de Datos](#base-de-datos)
 - [Casos de Uso](#casos-de-uso)
-- [Requisitos del Sistema](#requisitos-del-sistema)
-- [Instalación y Configuración](#instalación-y-configuración)
-- [Uso del Sistema](#uso-del-sistema)
-- [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
 
 ## Escenario Planteado
 
@@ -99,4 +94,3 @@ El sistema utiliza una base de datos en **Microsoft SQL Server Express** para al
 | 32 | Registrar Descuento           |
 | 33 | Modificar Descuento           |
 | 34 | Dar de baja Descuento         |
-
